@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css">
@@ -23,8 +24,29 @@
 <body>
 
     <header class="header">
+
+        <div class="bg-video">
+            <video class="bg-video__content" autoplay muted loop>
+                <source src="img/video.mp4" type="video/mp4">
+                <source src="img/video.webm" type="video/webm">
+            </video>
+        </div>
+
         <div class="header__logo-box">
             <img src="img/logo.png" alt="" class="header__logo">
+        </div>
+
+        <nav class="nav justify-content-center header__nav">
+          <a class="nav-link header__nav-link" href="#">link 1</a>
+          <a class="nav-link header__nav-link" href="#">link 2</a>
+          <a class="nav-link header__nav-link" href="#">link 3</a>
+        </nav>
+
+        <div class="header__scroll-box">
+            <h5 class="header__scroll-content">
+                <span class="header__scroll-content--text">scroll down</span>
+                <span class="header__scroll-content--icon"><i class="fas fa-angle-down fa-2x"></i></span>
+            </h5>
         </div>
     </header>
     

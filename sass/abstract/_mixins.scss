@@ -13,6 +13,21 @@
     transform: translate(-50%,-50%);
 }
 
+@mixin animate($val, $time) {
+    -webkit-transition: $val $time ease-in;
+    -moz-transition:  $val $time ease-in;
+    -ms-transition: $val $time ease-in;
+    -o-transition: $val $time ease-in;
+    transition: $val $time ease-in;
+}
+
+@mixin transform($val) {
+    -webkit-transform: $val;
+    -moz-transform:  $val;
+    -ms-transform: $val;
+    -o-transform: $val;
+    transform: $val;
+}
 
 //MEDIA QUERY MANAGER
 /*

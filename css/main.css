@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/* line 5, ../../../../../../Program Files (x86)/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 5, C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -21,45 +21,45 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../../../Program Files (x86)/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 22, C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../../../Program Files (x86)/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 24, C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../../../Program Files (x86)/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 26, C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../../../Program Files (x86)/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 28, C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../../../Program Files (x86)/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 30, C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../../../Program Files (x86)/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 103, C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../../../Program Files (x86)/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 32, C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../../../Program Files (x86)/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 116, C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
@@ -80,6 +80,24 @@ $breakepoint opcje:
 
 1em = 16px : najlepsze do media-query s─ů em'y , 16px to podstawowa warto┼Ť─ç czcionki przegl─ůdarki
 */
+@keyframes upDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-5px);
+    -moz-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    -o-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(8px);
+    -moz-transform: translateY(8px);
+    -ms-transform: translateY(8px);
+    -o-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+}
 /* line 1, ../sass/base/_base.scss */
 *,
 *::before,
@@ -106,19 +124,99 @@ body {
   line-height: 1.7;
   color: #777;
 }
+/* line 7, ../sass/base/_typography.scss */
+body a:link,
+body a:visited {
+  text-decoration: none;
+}
+
+/* line 1, ../sass/components/_bg-video.scss */
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  opacity: .2;
+  z-index: -1;
+}
+/* line 11, ../sass/components/_bg-video.scss */
+.bg-video__content {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
 /* line 1, ../sass/layout/_header-home.scss */
 .header {
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 3rem 0;
   position: relative;
 }
-/* line 6, ../sass/layout/_header-home.scss */
+/* line 7, ../sass/layout/_header-home.scss */
 .header__logo-box {
   text-align: center;
-  padding: 3rem 0;
 }
 /* line 11, ../sass/layout/_header-home.scss */
 .header__logo {
-  height: 12rem;
+  height: 10rem;
+}
+/* line 15, ../sass/layout/_header-home.scss */
+.header__nav {
+  margin-top: 2rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.3rem;
+  letter-spacing: 3.5px;
+}
+/* line 24, ../sass/layout/_header-home.scss */
+.header__nav-link:link, .header__nav-link:visited {
+  color: #777;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: .9rem 2.6rem;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 0.6rem 1.2rem rgba(0, 0, 0, 0.2);
+  -webkit-transition: all 320ms ease-in;
+  -moz-transition: all 320ms ease-in;
+  -ms-transition: all 320ms ease-in;
+  -o-transition: all 320ms ease-in;
+  transition: all 320ms ease-in;
+}
+/* line 35, ../sass/layout/_header-home.scss */
+.header__nav-link:not(:last-child) {
+  margin-right: 25px;
+}
+/* line 39, ../sass/layout/_header-home.scss */
+.header__nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+/* line 45, ../sass/layout/_header-home.scss */
+.header__scroll-box {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  text-align: center;
+  cursor: pointer;
+}
+/* line 54, ../sass/layout/_header-home.scss */
+.header__scroll-content {
+  color: #fff;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+/* line 60, ../sass/layout/_header-home.scss */
+.header__scroll-content--text {
+  display: block;
+}
+/* line 64, ../sass/layout/_header-home.scss */
+.header__scroll-content--icon {
+  display: block;
+  animation: upDown infinite 2s;
 }
