@@ -106,3 +106,19 @@ body {
   line-height: 1.7;
   color: #777;
 }
+
+/* line 1, ../sass/layout/_header-home.scss */
+.header {
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: relative;
+}
+/* line 6, ../sass/layout/_header-home.scss */
+.header__logo-box {
+  text-align: center;
+  padding: 3rem 0;
+}
+/* line 11, ../sass/layout/_header-home.scss */
+.header__logo {
+  height: 12rem;
+}
